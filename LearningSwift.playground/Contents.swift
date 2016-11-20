@@ -89,9 +89,106 @@ if userName == "Summer" {
     print("Sorry, you are not allowed to login")
 }
 
-//generate random number
+//9. generate random number
 var dice = arc4random_uniform(6)
 print(dice)
+
+
+//10. loop
+var i = 0
+while  i < 10 {
+    print(i)
+    i+=1
+}
+
+var array1 = [1, 5, 2, 38, 20, 56]
+var len = array1.count
+var counter = 0
+while counter < len {
+    array1[counter] += 1
+    counter+=1
+}
+    print(array1)
+for number in array1 {
+    print(number)
+}
+
+var names = ["Summer", "Jessy", "Judy", "Wendy"]
+for member in names {
+    print("Hi " + member + "!")
+}
+
+var arr1 = [2, 6, 9, 10, 24, 29]
+for (index, value) in arr1.enumerated() {
+    arr1[index] = value / 2
+}
+print(arr1)
+
+//11. class and object
+
+class Ghost {
+    var isAlive = true
+    
+    var strength = 9
+    
+    func kill(){
+        isAlive = false
+    }
+    
+    func isStrong() -> Bool {
+        if strength > 10 {
+             return true
+        }
+        else {
+            return false
+    }
+}
+}
+var ghost = Ghost()
+print(ghost.isAlive)
+ghost.strength = 20
+print(ghost.strength)
+ghost.kill()
+print(ghost.isAlive)
+print(ghost.isStrong())
+
+//12. Optional variable
+var inputNum : Int?
+//question mark means you are not sure about input number
+print(inputNum)
+
+/*
+In some situation that you don't know if user input can be valid or not, so use optional varialbe should be careful like below:
+*/
+//var userEnteredText = "3"
+var userEnteredText = "three"
+var userEnteredInteger = Int (userEnteredText)
+if var inputAge = userEnteredInteger {
+    print(inputAge * 2)
+} else {
+    //show error message saying user's input is not valid
+    print("Please use numbers instead of letters")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
