@@ -1,17 +1,3 @@
-//
-//  ViewController.swift
-//  What's the weather?
-//
-//  Created by Rui Zou on 11/30/16.
-//  Copyright © 2016 RuiZou. All rights reserved.
-//
-
-import UIKit
-
-class ViewController: UIViewController {
-
-    @IBAction func getResult(_ sender: Any) {
-
         if let url = URL(string: "http://www.weather-forecast.com/locations/" + inputCity.text!.replacingOccurrences(of: " ", with: "-") + "/forecasts/latest") {
             let request = NSMutableURLRequest(url: url)
             let task = URLSession.shared.dataTask(with: request as URLRequest) {
@@ -50,20 +36,3 @@ class ViewController: UIViewController {
         else {
             result.text = "Please give a correct String input."
         }
-    }
-    @IBOutlet var inputCity: UITextField!
-    @IBOutlet var result: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
-}
-
